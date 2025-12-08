@@ -105,8 +105,7 @@
 
                     let key = arguments[1][0]["key"].toString();
                     if (key !== "[object Object]") {
-                        console.log("对称加密Hex key：", key);
-                        console.log("对称加密Str key：", hexToStr(key));
+                        console.log(`对称加密Hex key：${key}, Str key：${hexToStr(key)}`);
                     } else {
                         console.log("对称加密Hex key：由于toString方法并未获取到，请自行使用上方打印的对象进行toString调用输出key。");
                     }
@@ -115,8 +114,7 @@
 
                     if (iv) {
                         if (iv.toString() !== "[object Object]") {
-                            console.log("对称加密Hex iv：", iv.toString());
-                            console.log("对称加密Str iv：", hexToStr(iv.toString()));
+                            console.log(`对称加密Hex iv：${iv.toString()}, Str iv：${hexToStr(iv.toString())}`);
                         } else {
                             console.log("对称加密Hex iv：由于toString方法并未获取到，请自行使用上方打印的对象进行toString调用输出iv。");
                         }
@@ -149,8 +147,7 @@
 
                     let key = arguments[1][1].toString();
                     if (key !== "[object Object]") {
-                        console.log("对称解密Hex key：", key);
-                        console.log("对称解密Str key：", hexToStr(key));
+                        console.log(`对称解密Hex key：${key}, Str key：${hexToStr(key)}`);
                     } else {
                         console.log("对称解密Hex key：由于toString方法并未获取到，请自行使用上方打印的对象进行toString调用输出key。");
                     }
@@ -158,8 +155,7 @@
                     if (Object.hasOwn(arguments[1][2], "iv") && arguments[1][2]["iv"]) {
                         let iv = arguments[1][2]["iv"].toString();
                         if (iv !== "[object Object]") {
-                            console.log("对称解密Hex iv：", iv);
-                            console.log("对称解密Str iv：", hexToStr(iv));
+                            console.log(`对称解密Hex iv：${iv}, Str iv：${hexToStr(iv)}`);
                         } else {
                             console.log("对称解密Hex iv：由于toString方法并未获取到，请自行使用上方打印的对象进行toString调用输出iv。");
                         }
