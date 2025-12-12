@@ -40,6 +40,7 @@
             } else {
                 if (arguments[0] && typeof arguments[0] === "string" && param.some(item => arguments[0].includes(item))) {
                     console.log("捕获到调用JSON.parse指定字符串 ---> ", arguments[0]);
+                    // console.log("📌 调用来源堆栈:\n", new Error().stack);
                     if (is_debugger === "1") {
                         debugger;
                     }
